@@ -1,99 +1,37 @@
-/* 
-Theme Name: Milly Twiter Archive
-Theme URI: http://code.mattrude.com/cgit.cgi/public/mirror/wp-theme-milly/
-Description: The Current mattrude.com theme, with custom post-types, custom taxonomy, Google Analytics, Google Webmaster Tools, Category Excluder Options, & a Robots.txt Editor.
-Author: Matt Rude
-Author URI: http://mattrude.com
-Version: 1.7-devel
-Tags: Widgets, Avatars
-*/
-
-
+/*
+ * Theme Name: Milly Twiter Archive
+ * Theme URI: http://code.mattrude.com/cgit.cgi/public/mirror/wp-theme-milly/
+ * Description: The Current mattrude.com theme, with custom post-types, custom taxonomy, Google Analytics, Google Webmaster Tools, Category Excluder Options, & a Robots.txt Editor.
+ * Author: Matt Rude
+ * Author URI: http://mattrude.com
+ * Version: 1.8
+ * Tags: Widgets, Avatars
+ */
 b,center,{margin:0;padding:0;vertical-align:baseline;outline:none;font-size:100%;font-weight:normal;font-style:normal;background:transparent;border:none;text-decoration:none;}
-h1{color: #666;font-style:normal;font-weight:normal;margin:0;}
-h1{font-size:1.9em;}
-a{cursor: pointer;}
-body { color: #666;font: 15px/21px;background: #e7e7de;margin: 8px; display: block; }
-a:link, a:visited { color: #e7e7de;text-decoration: none; }
-a:hover, a:active { text-decoration: underline; }
-p { margin: 0px; }
-del { text-decoration: line-through; }
-table { width: 100%; border: 1px solid #e2e2e2; }
-caption { font-size: .8em; font-style: italic; text-align: right; }
-td { padding: .3em; border: 1px solid #e2e2e2; }
-tr { background: #e7e7de; }
-th { padding: .3em; color: #fff; background: #113644; border: 1px solid #e2e2e2; }
-ol { margin: 10px 0 10px 30px; }
-sup { height: 0px; line-height: 1; position: relative; bottom: 1ex; margin-left: -0.7ex; }
-img, a img { padding: 5px;border: medium none; }
-#wrapper { margin: 0 auto; }
-.floatleft { float: left;padding: 0 6px 9px 6px; }
-.floatright { float: right;padding: 0 6px 9px 6px; }
-.button:hover { cursor: pointer; background: #113644; }
-#header {
-	overflow: hidden;
-	width: 700px;
-	margin: 0 auto;
-	}
-#header-title {
-	-moz-background-clip:border;
-	-moz-background-inline-policy:continuous;
-	-moz-background-origin:padding;
-	background:#596852 none repeat scroll 0 0;
-	border-bottom:1px solid #424f3c;
-	border-top:1px solid #424f3c;
-	margin: 0px auto;
-	overflow: hidden;
-	width: 700px;
-	}
-#header img {
-	margin: 0;
-	padding: 0;
-	}
-#site-title {
-	margin: 0px 0 0 15px;
-	font-size: 26px;
-	}
-#container {
-	overflow: hidden;
-	width: 700px;
-	margin: 20px auto;
-	}
-#container a {
-	color: #985c35;
-	}
-#content {
-	overflow: hidden;
-	padding: 20px 20px 0px 20px;
-	background: #fff;
-	border: 1px solid #e7e7e7;
-	}
-
-.byline {font-size: 11px;color: #999;padding: 1px 0 4px 0;}
-.post { border-bottom: 1px solid #E2E2E2; }
-.tweet_post { font-weight: bold; height: 40px; }
-.tweet_post img { border: none; float: left; background: #fff; }
-.tweet_post p { padding: 5px 0 0 0; }
-
-#footer-container {
-	overflow: hidden;
-	width: 700px;
-	color: #aaa;
-	background: #596852;
-	border: 1px solid #3d4f43;
-	margin: auto;
-	}
-#footer-text {
-	display: block;
-	text-align: center;
-	border:0 none;1
-	vertical-align: auto;
-	font-family:Georgia,"Times New Roman",Times,serif;
-	font-size:12px;
-	padding: 10px;
-	text-align:left;
-	text-decoration:none;
-	margin: 0;
-	}
-#footer-text a { color: #efe1e1; }
-#footer-text p { margin: 0;line-height: 16px; }
+a{cursor:pointer;}
+body{color:#666;font:15px/21px;background:#e7e7de;margin:8px;display:block;}
+a:link, a:visited{color:#e7e7de;text-decoration:none;}
+a:hover, a:active{text-decoration:underline;}
+p{margin:0px;}
+img, a img{padding:5px;border:medium none;}
+#wrapper{margin:0 auto;}
+.floatleft{float:left;padding:0 6px 9px 6px;}
+.floatright{float:right;padding:0 6px 9px 6px;}
+.button:hover{cursor:pointer;background:#113644;}
+#header{overflow:hidden;width:700px;margin:0 auto;}
+#header-title{-moz-background-clip:border;-moz-background-inline-policy:continuous;-moz-background-origin:padding;background:#596852 none repeat scroll 0 0;border-bottom:1px solid #424f3c;border-top:1px solid #424f3c;margin:0px auto;overflow:hidden;width:700px;}
+#header img{margin:0;padding:0;}
+#site-title{margin:0px 0 0 15px;font-size:26px;}
+#container{overflow:hidden;width:700px;margin:20px auto;}
+#container a{color:#985c35;}
+#content{overflow:hidden;padding:20px 20px 0px 20px;background:#fff;border:1px solid #e7e7e7;}
+.byline{font-size:11px;color:#999;padding:1px 0 4px 0;}
+.post{border-bottom:1px solid #E2E2E2;}
+.tweet_post{font-weight:bold;height:85px;}
+.tweet_post img{border:none;float:left;background:#fff;padding:10px 15px 5px 0;}
+.tweet_post p{padding:5px 0 0 0;font-size:20px;}
+#footer-container{overflow:hidden;width:700px;color:#aaa;background:#596852;border:1px solid #3d4f43;margin:auto;}
+#footer-text{display:block;text-align:center;border:0 none;1
+vertical-align:auto;font-family:Georgia,"Times New Roman",Times,serif;font-size:12px;padding:10px;text-align:left;text-decoration:none;margin:0;}
+#footer-text a{color:#efe1e1;}
+#footer-text p{margin:0;line-height:16px;}
