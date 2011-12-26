@@ -42,7 +42,7 @@ function milly_admin_header_style() {
  Change the page naviagion forward and back buttons
 */
 
-function milly_pre_next_post() {
+function milly_navigation_post() {
   ?>
   <div class="navigation">
      <div class="floatleft"><?php next_post_link('&laquo; %link') ?></div>
@@ -52,7 +52,7 @@ function milly_pre_next_post() {
   <?php
 }
 
-function milly_pre_next_post_cat() {
+function milly_navigation_category() {
   ?>
   <div class="navigation">
     <div class="txtalignleft"><?php previous_posts_link('&laquo; Newer Entries'); ?></div>

@@ -9,17 +9,17 @@
     $screename = $ozh_ta['screen_name']; ?>
     <div class="post" id="tweet_template-<?php echo $post->ID; ?>">
       <div id='tweet-<?php echo $post->ID; ?>' class='tweet_post' >
-        <img src="<?php ozh_ta_twitter_avatar(); ?>" class='tweet-image' style='margin-right: 5px;' alt='Twitter bird' />
+	<div class="twitter-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), apply_filters( 'twentyeleven_status_avatar', '65' ) ); ?></div>
 	<?php the_content(); ?>
       </div>
       <div id='tweet_date-<?php echo $post->ID; ?>' class='byline tweet_date' >
 	Posted to <a href="<?php ozh_ta_tweet_link(); ?>">Twitter</a> by <a href="http://twitter.com/<?php echo $screename; ?>">Matt Rude</a> on <?php
         if ($tweet_id) { 
           echo "<a href='$permlink'>";
-          the_time('F jS, h:ma T Y');
+          the_time('F jS, h:ma Y T');
           echo "</a>, ";
         } else {
-          the_time('F jS, h:ma T Y');
+          the_time('F jS, h:ma Y T');
         }
 	edit_post_link('Edit', ' | '); ?>
       </div>	
