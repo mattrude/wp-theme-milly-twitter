@@ -13,8 +13,8 @@
 	<?php the_content(); ?>
       </div>
       <div id='tweet_date-<?php echo $post->ID; ?>' class='byline tweet_date' >
-	Posted to <a href="<?php ozh_ta_tweet_link(); ?>">Twitter</a> by <a href="http://twitter.com/<?php echo $screename; ?>">Matt Rude</a> on <?php
-        if ($tweet_id) { 
+	Posted to <a href="<?php ozh_ta_tweet_link(); ?>" rel="nofollow">Twitter</a> by <a href="http://twitter.com/<?php echo $screename; ?>" rel="nofollow">Matt Rude</a> on <?php
+        if ( is_home() ) { 
           echo "<a href='$permlink'>";
           the_time('F jS, h:ma Y T');
           echo "</a>, ";
@@ -24,12 +24,20 @@
 	edit_post_link('Edit', ' | '); ?>
       </div>	
     </div>
-  <?php endwhile; ?>
+  <?php endwhile; 
+  if ( is_home() ) { ?>
   <div class="navigation">
      <div class="floatleft"><?php next_posts_link('&laquo; Older Tweets') ?></div>
      <div class="floatright"><?php previous_posts_link('Newer Tweets &raquo;') ?></div>
      <div class="clearfloatthick">&nbsp;</div>
    </div>
+  <?php } else { ?>
+  <div class="navigation">
+     <div class="floatleft"><?php next_post_link('%link','&laquo; Previous Tweet') ?></div>
+     <div class="floatright"><?php previous_post_link('%link','Next Tweet &raquo;') ?></div>
+     <div class="clearfloatthick"><center><a href="<?php bloginfo('url'); ?>">Home</a></center></div>
+   </div>
+   <?php } ?>
 </div><!--close content id-->
 
 <?php get_footer(); ?>
