@@ -29,7 +29,8 @@ img, a img{padding:5px;border:medium none;}
 .post{border-bottom:1px solid #E2E2E2;}
 .tweet_post{font-weight:bold;height:85px;}
 .tweet_post img{border:none;float:left;background:#fff;padding:10px 15px 5px 0;}
-.tweet_post p{padding:5px 0 0 0;font-size:20px;}
+.tweet_post p{padding:20px 0 0 0;font-size:20px;}
+.navigation {padding:10px 0;}
 #footer-container{overflow:hidden;width:700px;color:#aaa;background:#596852;border:1px solid #3d4f43;margin:auto;}
 #footer-text{display:block;text-align:center;border:0 none;1
 vertical-align:auto;font-family:Georgia,"Times New Roman",Times,serif;font-size:12px;padding:10px;text-align:left;text-decoration:none;margin:0;}
