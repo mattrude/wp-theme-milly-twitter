@@ -15,11 +15,14 @@
 		<div id='tweet_date-<?php echo $post->ID; ?>' class='byline tweet_date' ><?php
 			if ( get_post_meta( $post->ID, 'aktt_twitter_id', true ) ) {
 				$twitterid = get_post_meta( $post->ID, 'aktt_twitter_id', true);
+			} elseif ( get_post_meta( $post->ID, '_aktt_tweet_id', true ) ) {
+				$twitterid = get_post_meta( $post->ID, '_aktt_tweet_id', true);
 			} elseif ( get_post_meta( $post->ID, 'ozh_ta_id', true ) ) {
 				$twitterid = get_post_meta( $post->ID, 'ozh_ta_id', true);
-			} else {
+			} elseif ( function_exists(twitter_permalink) ) {
                 $twitterid = twitter_permalink( false );
-				//$twitterid ='';
+            } else {
+				$twitterid ='';
 			}
 
 			?>Posted to <a href="https://twitter.com/mdrude/status/<?php echo $twitterid; ?>" rel="nofollow">Twitter</a> by <a href="http://twitter.com/<?php echo $screename; ?>" rel="nofollow">Matt Rude</a> on <?php
