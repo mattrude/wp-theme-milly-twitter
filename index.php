@@ -46,8 +46,8 @@
    </div>
   <?php } else { ?>
   <div class="navigation">
-     <div class="floatleft"><?php next_post_link('%link','&laquo; Previous Tweet') ?></div>
-     <div class="floatright"><?php previous_post_link('%link','Next Tweet &raquo;') ?></div>
+     <div class="floatleft"><?php next_post_link('%link','&laquo; Next Tweet') ?></div>
+     <div class="floatright"><?php previous_post_link('%link','Previous Tweet &raquo;') ?></div>
      <div class="clearfloatthick"><center><a href="<?php bloginfo('url'); ?>">Home</a></center></div>
    </div>
    <?php } ?>
