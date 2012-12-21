@@ -1,17 +1,15 @@
-<?php /* Template Name: Twitter Page */ ?>
 <?php get_header(); ?>
 
 <div id='content'>
   <?php while (have_posts()) : the_post();
 	global $ozh_ta;
 	$tweet_id = get_post_meta( $post->ID, 'ozh_ta_id', true);
-    //$screename = $ozh_ta['screen_name'];
 	$screename = 'mdrude'; ?>
 	<div id="tweet_template-<?php echo $post->ID; ?>" class="post">
 		<div id='tweet-<?php echo $post->ID; ?>' class='tweet_post' >
 			<div class="twitter-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), apply_filters( 'twentyeleven_status_avatar', '64' ) ); ?></div>
 			<?php the_content(); ?>
-		</div><!-- End div class twitter-avatar -->
+		</div>
 		<div id='tweet_date-<?php echo $post->ID; ?>' class='byline tweet_date' ><?php
 			if ( get_post_meta( $post->ID, 'aktt_twitter_id', true ) ) {
 				$twitterid = get_post_meta( $post->ID, 'aktt_twitter_id', true);
@@ -35,8 +33,8 @@
 				the_time('F jS Y, g:i a T');
 			}
 			edit_post_link('Edit', ', '); ?>
-		</div><!-- End div id tweet_date-<?php echo $post->ID; ?> -->
-	</div><!-- End div id tweet_template-<?php echo $post->ID; ?> -->
+		</div>
+	</div>
   <?php endwhile; 
   if ( is_home() ) { ?>
   <div class="navigation">
@@ -51,6 +49,6 @@
      <div class="clearfloatthick"><center><a href="<?php bloginfo('url'); ?>">Home</a></center></div>
    </div>
    <?php } ?>
-</div><!--close content id-->
+</div>
 
 <?php get_footer(); ?>
