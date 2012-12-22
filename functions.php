@@ -7,15 +7,15 @@ add_theme_support( 'automatic-feed-links' );
  Your changeable header business starts here
 */
 
-define( 'HEADER_TEXTCOLOR', '' );
-define( 'HEADER_IMAGE', '%s/images/header-cabin.jpg' );
-define( 'HEADER_IMAGE_WIDTH', apply_filters( 'milly_header_image_width', 700 ) );
-define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'milly_header_image_height', 143 ) );
-define( 'NO_HEADER_TEXT', true );
+$custom_header_support = array(
+    'default-image' => '%s/images/header-cabin.jpg',
+    'default-text-color' => '000',
+    'header-text' => false,
+    'width' => 700,
+    'height' => 143,
+);
 
-// Add a way for the custom header to be styled in the admin panel that controls
-// custom headers. See milly_admin_header_style(), below.
-add_custom_image_header( '', 'milly_admin_header_style' );
+add_theme_support( 'custom-header', $custom_header_support );
 
 function milly_admin_header_style() {
 ?>
