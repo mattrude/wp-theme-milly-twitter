@@ -36,8 +36,8 @@
   <?php endwhile; 
   if ( is_home() ) { ?>
   <div class="navigation">
-     <div class="floatleft"><?php next_posts_link('&laquo; Older Tweets') ?></div>
-     <div class="floatright"><?php previous_posts_link('Newer Tweets &raquo;') ?></div>
+     <div class="floatleft"><?php previous_posts_link('&laquo; Newer Tweets') ?></div>
+     <div class="floatright"><?php next_posts_link('Older Tweets &raquo;') ?></div>
      <div class="clearfloatthick">&nbsp;</div>
    </div>
   <?php } else { ?>
