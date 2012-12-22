@@ -2,8 +2,6 @@
 
 <div id='content'>
   <?php while (have_posts()) : the_post();
-	global $ozh_ta;
-	$tweet_id = get_post_meta( $post->ID, 'ozh_ta_id', true);
 	$screename = 'mdrude'; ?>
 	<div id="tweet_template-<?php echo $post->ID; ?>" class="post">
 		<div id='tweet-<?php echo $post->ID; ?>' class='tweet_post' >
