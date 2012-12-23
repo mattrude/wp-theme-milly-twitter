@@ -34,17 +34,20 @@
 		</div>
 	</div>
   <?php endwhile; 
-  if ( is_home() ) { ?>
+  if ( is_home() ) {
+  $paged = get_query_var('paged'); ?>
   <div class="navigation">
      <div class="floatleft"><?php previous_posts_link('&laquo; Newer Tweets') ?></div>
      <div class="floatright"><?php next_posts_link('Older Tweets &raquo;') ?></div>
-     <div class="clearfloatthick">&nbsp;</div>
+     <?php if ($paged > 1) { ?>
+     <div class="floatcenter"><a href="<?php bloginfo('url'); ?>">Home</a></div>
+     <?php } ?>
    </div>
   <?php } else { ?>
   <div class="navigation">
      <div class="floatleft"><?php next_post_link('%link','&laquo; Next Tweet') ?></div>
      <div class="floatright"><?php previous_post_link('%link','Previous Tweet &raquo;') ?></div>
-     <div class="clearfloatthick"><center><a href="<?php bloginfo('url'); ?>">Home</a></center></div>
+     <div class="floatcenter"><a href="<?php bloginfo('url'); ?>">Home</a></div>
    </div>
    <?php } ?>
 </div>

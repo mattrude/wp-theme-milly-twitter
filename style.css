@@ -17,6 +17,7 @@ img, a img{padding:5px;border:medium none;}
 #wrapper{margin:0 auto;}
 .floatleft{float:left;padding:0 6px 9px 6px;}
 .floatright{float:right;padding:0 6px 9px 6px;}
+.floatcenter{margin:0 auto;width:100px;text-align:center;}
 .button:hover{cursor:pointer;background:#113644;}
 #header{overflow:hidden;width:700px;margin:0 auto;}
 #header-title{-moz-background-clip:border;-moz-background-inline-policy:continuous;-moz-background-origin:padding;background:#596852 none repeat scroll 0 0;border-bottom:1px solid #424f3c;border-top:1px solid #424f3c;margin:0px auto;overflow:hidden;width:700px;}
